@@ -30,7 +30,7 @@ class GenericViewModel: ObservableObject {
 }
 
 
-// MARK: ViewModel
+// MARK: Generic View can bu used for buttons which will be used several times 
 
 struct GenericView<T:View> : View {
     

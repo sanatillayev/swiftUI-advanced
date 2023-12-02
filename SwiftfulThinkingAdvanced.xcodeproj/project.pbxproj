@@ -20,6 +20,9 @@
 		049C65542B0DDB2C004F7787 /* AnimateableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C65532B0DDB2C004F7787 /* AnimateableData.swift */; };
 		04F171FF2AFE72D000250DFD /* MatchedGeometryEffectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F171FE2AFE72D000250DFD /* MatchedGeometryEffectBootcamp.swift */; };
 		04F172012AFE75DF00250DFD /* CustomShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F172002AFE75DF00250DFD /* CustomShapes.swift */; };
+		04F5D0832B1B725500B854AA /* PreferenceKeyBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D0822B1B725500B854AA /* PreferenceKeyBootcamp.swift */; };
+		04F5D0862B1B824600B854AA /* GeometryPreferenceKeyBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D0852B1B824600B854AA /* GeometryPreferenceKeyBootcamp.swift */; };
+		04F5D0882B1BA61600B854AA /* ScrollViewOffsetPreferenceKeyBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D0872B1BA61600B854AA /* ScrollViewOffsetPreferenceKeyBootcamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		049C65532B0DDB2C004F7787 /* AnimateableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateableData.swift; sourceTree = "<group>"; };
 		04F171FE2AFE72D000250DFD /* MatchedGeometryEffectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedGeometryEffectBootcamp.swift; sourceTree = "<group>"; };
 		04F172002AFE75DF00250DFD /* CustomShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShapes.swift; sourceTree = "<group>"; };
+		04F5D0822B1B725500B854AA /* PreferenceKeyBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceKeyBootcamp.swift; sourceTree = "<group>"; };
+		04F5D0852B1B824600B854AA /* GeometryPreferenceKeyBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryPreferenceKeyBootcamp.swift; sourceTree = "<group>"; };
+		04F5D0872B1BA61600B854AA /* ScrollViewOffsetPreferenceKeyBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewOffsetPreferenceKeyBootcamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 				049C65532B0DDB2C004F7787 /* AnimateableData.swift */,
 				0459AB3E2ACBF56D00C85AEA /* GenericsBootcamp.swift */,
 				0459AB402ACBFA6900C85AEA /* ViewBuilderBotcamp.swift */,
+				04F5D0842B1B820F00B854AA /* PreferenceKeyBootcamp */,
 				0466FCAA2AD9991200F9CEE5 /* CustomNavBar */,
 				0459AB2C2ACBD4F900C85AEA /* Assets.xcassets */,
 				0459AB2E2ACBD4F900C85AEA /* Preview Content */,
@@ -100,6 +107,16 @@
 				0466FCAB2AD9992800F9CEE5 /* AppNavBarView.swift */,
 			);
 			path = CustomNavBar;
+			sourceTree = "<group>";
+		};
+		04F5D0842B1B820F00B854AA /* PreferenceKeyBootcamp */ = {
+			isa = PBXGroup;
+			children = (
+				04F5D0822B1B725500B854AA /* PreferenceKeyBootcamp.swift */,
+				04F5D0852B1B824600B854AA /* GeometryPreferenceKeyBootcamp.swift */,
+				04F5D0872B1BA61600B854AA /* ScrollViewOffsetPreferenceKeyBootcamp.swift */,
+			);
+			path = PreferenceKeyBootcamp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,11 +194,14 @@
 				0459AB3B2ACBE27400C85AEA /* AnyTransitionView.swift in Sources */,
 				04F172012AFE75DF00250DFD /* CustomShapes.swift in Sources */,
 				0459AB3F2ACBF56D00C85AEA /* GenericsBootcamp.swift in Sources */,
+				04F5D0862B1B824600B854AA /* GeometryPreferenceKeyBootcamp.swift in Sources */,
 				04F171FF2AFE72D000250DFD /* MatchedGeometryEffectBootcamp.swift in Sources */,
+				04F5D0832B1B725500B854AA /* PreferenceKeyBootcamp.swift in Sources */,
 				0459AB372ACBD51800C85AEA /* ViewModifierBootcamp.swift in Sources */,
 				0459AB412ACBFA6900C85AEA /* ViewBuilderBotcamp.swift in Sources */,
 				049C65522B06749A004F7787 /* CustomCurves.swift in Sources */,
 				049C65542B0DDB2C004F7787 /* AnimateableData.swift in Sources */,
+				04F5D0882B1BA61600B854AA /* ScrollViewOffsetPreferenceKeyBootcamp.swift in Sources */,
 				0459AB292ACBD4F700C85AEA /* SwiftfulThinkingAdvancedApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
