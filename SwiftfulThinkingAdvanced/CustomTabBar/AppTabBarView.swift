@@ -14,17 +14,18 @@ import SwiftUI
 struct AppTabBarView: View {
     
     @State private var selection: String = "home"
-    @State private var tabSelection: TabBarItem = TabBarItem(title: "Home", iconName: "house", color: .blue)
+    @State private var tabSelection: TabBarItem = .home
 
     var body: some View {
         CustomTabBarContainerView(selection: $tabSelection) {
             Color.blue
-                .tabBarItem(tab: TabBarItem(title: "Home", iconName: "house", color: .blue), selection: $tabSelection)
+                .tabBarItem(tab: .home, selection: $tabSelection)
             Color.red
-                .tabBarItem(tab: TabBarItem(title: "Favourites", iconName: "heart", color: .red), selection: $tabSelection)
-            
+                .tabBarItem(tab: .favorite, selection: $tabSelection)
             Color.orange
-                .tabBarItem(tab: TabBarItem(title: "Profile", iconName: "person", color: .green), selection: $tabSelection)
+                .tabBarItem(tab: .profile, selection: $tabSelection)
+            Color.green
+                .tabBarItem(tab: .messages, selection: $tabSelection)
         }
     }
 }
@@ -46,6 +47,11 @@ extension AppTabBarView {
                 .tabItem {
                     Image(systemName: "person")
                     Text("Profile")
+                }
+            Color.orange
+                .tabItem {
+                     Image(systemName: "message")
+                    Text("Messages")
                 }
         }
     }

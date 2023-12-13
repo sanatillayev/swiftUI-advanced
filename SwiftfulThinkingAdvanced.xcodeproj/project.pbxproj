@@ -97,6 +97,7 @@
 				0459AB402ACBFA6900C85AEA /* ViewBuilderBotcamp.swift */,
 				04F5D0842B1B820F00B854AA /* PreferenceKeyBootcamp */,
 				0466FCAA2AD9991200F9CEE5 /* CustomTabBar */,
+				04F5D0932B29B67900B854AA /* CustomNavBar */,
 				0459AB2C2ACBD4F900C85AEA /* Assets.xcassets */,
 				0459AB2E2ACBD4F900C85AEA /* Preview Content */,
 			);
@@ -114,7 +115,6 @@
 		0466FCAA2AD9991200F9CEE5 /* CustomTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				0466FCAB2AD9992800F9CEE5 /* AppNavBarView.swift */,
 				04F5D0892B26F7F700B854AA /* AppTabBarView.swift */,
 				04F5D08B2B26FB4D00B854AA /* CustomTabBarView.swift */,
 				04F5D08D2B27122800B854AA /* CustobTabBarContainerView.swift */,
@@ -132,6 +132,14 @@
 				04F5D0872B1BA61600B854AA /* ScrollViewOffsetPreferenceKeyBootcamp.swift */,
 			);
 			path = PreferenceKeyBootcamp;
+			sourceTree = "<group>";
+		};
+		04F5D0932B29B67900B854AA /* CustomNavBar */ = {
+			isa = PBXGroup;
+			children = (
+				0466FCAB2AD9992800F9CEE5 /* AppNavBarView.swift */,
+			);
+			path = CustomNavBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
