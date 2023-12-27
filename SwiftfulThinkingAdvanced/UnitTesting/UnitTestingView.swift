@@ -1,5 +1,5 @@
 //
-//  UnitTestingBootcampView.swift
+//  UnitTestingView.swift
 //  SwiftfulThinkingAdvanced
 //
 //  Created by Bilol Sanatillayev on 18/12/23.
@@ -16,13 +16,13 @@
 */
 import SwiftUI
 
-struct UnitTestingBootcampView: View {
+struct UnitTestingView: View {
     
-    @StateObject private var vm: UnitTestingBootcampViewModel
+    @StateObject private var vm: UnitTestingViewModel
     
     
     init (isPremium: Bool) {
-        _vm = StateObject (wrappedValue: UnitTestingBootcampViewModel(isPremium: isPremium))
+        _vm = StateObject (wrappedValue: UnitTestingViewModel(isPremium: isPremium))
     }
     
     var body: some View {
@@ -31,5 +31,5 @@ struct UnitTestingBootcampView: View {
 }
 
 #Preview {
-    UnitTestingBootcampView(isPremium: true)
+    UnitTestingView(isPremium: true)
 }

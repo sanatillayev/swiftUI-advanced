@@ -40,6 +40,17 @@
                ReferencedContainer = "container:SwiftfulThinkingAdvanced.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "04FB80922B39E7010069791C"
+               BuildableName = "SwiftfulThinkingAdvancedTests.xctest"
+               BlueprintName = "SwiftfulThinkingAdvancedTests"
+               ReferencedContainer = "container:SwiftfulThinkingAdvanced.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

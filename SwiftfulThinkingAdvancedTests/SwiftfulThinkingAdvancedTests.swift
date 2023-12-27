@@ -1,13 +1,13 @@
 //
-//  SwiftfulThinkingAdvanced_Tests.swift
-//  SwiftfulThinkingAdvanced_Tests
+//  SwiftfulThinkingAdvancedTests.swift
+//  SwiftfulThinkingAdvancedTests
 //
-//  Created by Bilol Sanatillayev on 18/12/23.
+//  Created by Bilol Sanatillayev on 25/12/23.
 //
 
 import XCTest
 
-final class SwiftfulThinkingAdvanced_Tests: XCTestCase {
+final class SwiftfulThinkingAdvancedTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
