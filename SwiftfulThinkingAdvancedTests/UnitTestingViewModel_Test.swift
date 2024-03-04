@@ -7,10 +7,17 @@
 
 import XCTest
 @testable import SwiftfulThinkingAdvanced
+import Combine
+
+// Naming Structure: test_UnitofWork_StateUnderTest_ExpectedBehavior
+// Naming Structure: test_[struct or class]_[variable or function]_[expected result]
+// Testing Structure: Given, When, Then
 
 final class UnitTestingViewModel_Test: XCTestCase {
 
     var viewModel: UnitTestingViewModel?
+    var cancellable = Set<AnyCancellable>()
+    
     override func setUpWithError() throws {
         viewModel = UnitTestingViewModel(isPremium: Bool.random())
     }
@@ -265,6 +272,74 @@ final class UnitTestingViewModel_Test: XCTestCase {
         } catch {
             XCTFail()
         }
+    }
+    
+    func test_UnitTestingViewModel_downloadWithEscaping_shouldReturnItems() {
+        // given
+        let vm = UnitTestingViewModel(isPremium: Bool.random())
+        
+        
+        // when
+        let expectation = XCTestExpectation(description: "Should reuturn items after 3 seconds")
+        
+        vm.$dataArray
+            .dropFirst()
+            .sink { returnedItems in
+                expectation.fulfill()
+            }
+            .store(in: &cancellable)
+        vm.downloadWithEscaping()
+        
+        // Then
+        wait(for: [expectation], timeout: 5)
+        XCTAssertGreaterThan(vm.dataArray.count, 0)
+    }
+    
+    func test_UnitTestingViewModel_downloadWithCombine_shouldReturnItems() {
+        // given
+        let vm = UnitTestingViewModel(isPremium: Bool.random())
+        
+        
+        // when
+        let expectation = XCTestExpectation(description: "Should reuturn items after a second")
+        
+        vm.$dataArray
+            .dropFirst()
+            .sink { returnedItems in
+                expectation.fulfill()
+            }
+            .store(in: &cancellable)
+        
+        vm.downloadWithCombine()
+        
+        // Then
+        wait(for: [expectation], timeout: 5)
+        XCTAssertGreaterThan(vm.dataArray.count, 0)
+    }
+    
+    func test_UnitTestingViewModel_downloadWithCombine_shouldReturnItems2() {
+        // given
+        let items: [String] = [UUID().uuidString, UUID().uuidString, UUID().uuidString, UUID().uuidString, UUID().uuidString]
+        let dataService: NewDataServiceProtocol = NewMockDataService(items: items)
+        let vm = UnitTestingViewModel(isPremium: Bool.random(), dataService: dataService)
+        
+        
+        // when
+        let expectation = XCTestExpectation(description: "Should reuturn items after a second")
+        
+        vm.$dataArray
+            .dropFirst()
+            .sink { returnedItems in
+                expectation.fulfill()
+            }
+            .store(in: &cancellable)
+        
+        vm.downloadWithCombine()
+        
+        // Then
+        wait(for: [expectation], timeout: 5)
+        XCTAssertGreaterThan(vm.dataArray.count, 0)
+        XCTAssertEqual(vm.dataArray.count, items.count)
     }
 
 
